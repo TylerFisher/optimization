@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Optimization - Tyler Fisher</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <script type="text/javascript" src="//use.typekit.net/drv8ufz.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/yellows.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+                <section>
+                    <h1>Don't crash the browser!</h1>
+
+                    <p>Tyler Fisher | @tylrfishr</p>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>OPTIMIZATION MINIFICATION COMPRESSION RESPONSIVE IMAGES LOAD TESTING</h2>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <img src="http://media.giphy.com/media/FNJjBAaz0mOAg/giphy.gif" width="800">
+
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>We have a problem:</h2>
+
+                    <h1>Bandwidth</h1>
+                </section>
+
+                <section>
+                    <p>Nothing we make should require abnormally fast connections.</p>
+                </section>
+
+                <section>
+                    <p>If you require a loading screen, you're doing it wrong.</p>
+                </section>
+
+                <section>
+                    <h3>Guiding principles</h3>
+
+                    <ol>
+                        <li>The user should download as few things as possible.</li>
+                        <li>The things should be as small as possible.</li>
+                        <li>Different devices might need different things.</li>
+                    </ol>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>Images</h1>
+
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>Sizing</h3>
+
+                    <p>Your image should never be wider than 1500px.</p>
+                </section>
+
+                <section>
+                    <h3>Cropping</h3>
+
+                    <p>Most screens have a 16:9 aspect ratio.</p>
+
+                    <p>Crop your images to be 16:9 so they fit on the screen.</p>
+
+                    <p>Thus, a full size image would be 1500px x 844px.</p>
+
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>Format</h3>
+
+                    <p>.jpg FOREVER</p>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>GIFS!</h1>
+                    <img src="http://nick.sg/amaz.gif">
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <p>GIFs are great. They can be <a href="http://www.npr.org/templates/story/story.php?storyId=266757131&live=1" target="_blank">very effective</a>. </p>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>The catch with GIFs</h3>
+
+                    <p>They are inefficient and tend to be very big in file size.</p>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <p>GIFs should be short, repetitive animations.</p>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>Video</h1>
+                </section>
+
+                <section>
+                    <p>When you can, use <a href="http://vimeo.com">Vimeo</a>.</p>
+                </section>
+
+                <section>
+                    <h3>When you can't use Vimeo</h3>
+                    <ul>
+                        <li>Music rights!</li>
+                        <li>Advanced interactive components</li>
+                        <li>You go over the <a href="https://vimeo.com/plus" target="_blank">free account limits</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Autoplaying Video</h3>
+
+                    <p>Don't do it. It won't work on mobile anyway.</p>
+                </section>
+
+                <section>
+                    <h1>Audio</h1>
+                </section>
+
+                <section>
+                    <h2>CAVEAT:</h2>
+                    <p>Web browsers suck at audio.</p>
+                </section>
+
+                <section>
+                    <p>It is tempting to use <a href="http://soundcloud.com" target="_blank">SoundCloud</a>.</p>
+                </section>
+
+                <section>
+                    <h3>When you can't use SoundCloud</h3>
+                    <ol>
+                        <li>Music rights!</li>
+                        <li>When you don't want to use their <a href="http://pitchfork.com/reviews/tracks/16894-baths-ocean-death/" target="_blank">incredibad super ugly player</a></li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3>Native audio</h3>
+
+                    <p>Native audio requires both mp3 files and ogg files to support all browsers.</p>
+                </section>
+
+                <section>
+                    <p><a href="http://jplayer.org" target="_blank">jPlayer</a> is an okay library for interacting with audio.</p>
+
+                    <p>See me if you want to use it.</p>
+                </section>
+
+                <section>
+                    <h1>Your code!</h1>
+                </section>
+
+                <section>
+                    <h3>Minification</h3>
+
+                    <p>Removing all the whitespace, comments and other unnecessary characters from your code.</p>
+
+                    <p>Even whitespace takes up space in your file size.</p>
+                </section>
+
+                <section>
+                    <p>Always <a href="http://jscompress.com/" target="_blank">minify</a> your code in production.</p>
+
+                    <p>Always use <a href="http://jquery.com/download/" target="_blank">minified versions</a> of libraries.</p>
+                </section>
+
+                <section>
+                    <h3>Bundling</h3>
+
+                    <p>Combining all code of the same language into one file.</p>
+                </section>
+
+                <section>
+                    <h3>Steps for effective minification and bundling</h3>
+                    <ol>
+                        <li>Move all JavaScript into one file.</li>
+                        <li>Move all CSS into one file.</li>
+                        <li>Minify those files and use them in your HTML.</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h1>But wait, there's more!</h1>
+                </section>
+
+                <section>
+                    <h2>Story Time!</h2>
+
+                    <a href="http://apps.npr.org/borderland" target="_blank"><img src="img/borderland.png"></a>
+                </section>
+
+                <section>
+                    <h3>Lazy loading</h3>
+
+                    <p><a href="http://luis-almeida.github.io/unveil/" target="_blank">jQuery Unveil</a> is a lightweight library that handles lazy loading.</p>
+                </section>
+
+                <section>
+                    <h3>Responsive images</h3>
+
+                    <img src="http://nick.sg/ohohohgodno.gif" width="800">
+                </section>
+
+                <section>
+                    <h3>A sane solution</h3>
+
+                    <p><a href="https://github.com/nprapps/borders-map/blob/master/www/js/app.js#L159" target="_blank">Some JavaScript</a> that subs in separate crops for separate screen sizes</p>
+                </section>
+
+                <section>
+                    <h1>Key Points</h1>
+                </section>
+
+                <section>
+                    <h2>Multimedia is expensive</h2>
+                </section>
+
+                <section>
+                    <h2>Browsers suck at multimedia</h2>
+                </section>
+
+                <section>
+                    <h2>Outsource when you can</h2>
+                </section>
+
+                <section>
+                    <h2>Make your code as small as possible</h2>
+                </section>
+
+                <section>
+                    <h3>Guiding principles</h3>
+
+                    <ol>
+                        <li>The user should download as few things as possible.</li>
+                        <li>The things should be as small as possible.</li>
+                        <li>Different devices might need different things.</li>
+                    </ol>
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: false,
+                progress: false,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    // { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
